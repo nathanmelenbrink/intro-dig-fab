@@ -20,9 +20,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <link href="../css/style.css" rel="stylesheet">
-<link href="../css/font-awesome.min.css" rel="stylesheet">
-<script src="../js/vendor/modernizr.js"></script>
 
 
 </head>
@@ -35,57 +35,21 @@
 <div class="row">
 
 	<!-- ROW TITLE -->
-	<div class="small-3 medium-3 large-3  columns">
+	<div class="col-md-3">
 		<h3> HTML </h3>
 	</div >
 
 	<!-- LIST OF LINKS -->
-	<div class="small-9 medium-9 large-9  columns">
+	<div class="col-md-9">
 
-	<h3> Customizing Jekyll </h3>
-	<p> The template we are using by default is called <a href='https://github.com/jekyll/minima'>Minima</a>. Take a look at the folders in the directory. Next, we'll learn how to customize HTML and CSS with Jekyll (drawing from the <a href='https://help.github.com/en/articles/customizing-css-and-html-in-your-jekyll-theme'> documentation</a>). 
+	<h3> How to Make a Website </h3>
+	<p> Websites are are documents that use formatting instructions in the Hypertext Markup Language (HTML) to render page content on a display terminal (usually a web browser). Web pages are hosted on a server and accessed with the Hypertext Transfer Protocol (HTTP/HTTPS). There are many ways to create a web page, such as:  </p>
+	<ul>
+		<li> <b>Static sites</b> consist of pages written in basic HTML files. This method is recommended, as it maximizes the amount of control you have over your site, and builds knowledge of web fundamentals. The downside to static sites is that managing repeated elements such as headers and footers can be tedious for very large websites. </li>
+		<li> <b>Content management systems</b> (CMS) store page content in a database and provide functionality to edit and apply themes. Thi makes it easier to manage large sites, but comes at the cost of control, flexibility and performance.  </li>
+		<li> <b>Static site generators</b> (SSG) are a compromise between the two, where you generate a website using Markdown files and templates. Popular static site generators include Jekyll, Pelican and Hugo. We've tried these in the past, but found standard static sites to be preferable for making personal websites. </li>
 
-		<ul> 
-			<li> Let's first customize the layout by making a <code>default.html</code> file in a new <code>_layouts</code> folder in the root of your site's repository. We can copy the contents of the <code>default.html</code> file from the <a href='https://github.com/jekyll/minima/blob/master/_layouts/default.html'>original template</a>.</li>
-			<li> Then, delete the line that imports a header <code>{%- include head.html -%}</code>, and replace that with the header code below. This will tell the template to look for our custom CSS. 
-
-<pre><code class="html">
-&lthead&gt
-  &ltmeta charset="utf-8"&gt
-  &lttitle>{{ page.title }}&lt/title&gt
-  &ltlink rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}"&gt
-&lt/head&gt
-</code> </pre>
-
-		  	</li>
-		  	<li> Customize the layout as you'd like, and commit and push to view the changes on your website. </li>
-
-		  </ul>
-
-  	</p>
-  	<p> Next, let's customize the styling with CSS:
-  		<ul> 
-  			<li> Create a file called <code>/assets/css/style.scss</code> in the root of your site's repository. </li>
-
-  			<li> Copy and paste the content below to the new file: <br>   	
-<pre><code class="html">
----
----
-
-@import "{{ site.theme }}";
-
-h1{
-  color: red;
-}
-</code> </pre>
-  			</li>
-  			<li> Commit and push to view the changes on your website. </li>
-  		</ul>
-
-  	 </p>
-
-  	<p> Now if we change the custom CSS in the <code>/assets/css/style.scss</code> file, it should apply to all of our site. For example, try changing the paragraph text color (we'll talk more about CSS techniques later if time allows).</p>
-
+	</ul>
 
 	<h3> <a href="https://www.w3schools.com/html/html_intro.asp">HyperText Markup Language</a> </h3>
 	<p>(From W3 Schools) HTML is the standard markup language for creating Web pages.</p>
@@ -376,6 +340,50 @@ h1{
 
 	</div>
 </div>
+
+<!-- 	<h3> Customizing Jekyll </h3>
+	<p> The template we are using by default is called <a href='https://github.com/jekyll/minima'>Minima</a>. Take a look at the folders in the directory. Next, we'll learn how to customize HTML and CSS with Jekyll (drawing from the <a href='https://help.github.com/en/articles/customizing-css-and-html-in-your-jekyll-theme'> documentation</a>). 
+
+		<ul> 
+			<li> Let's first customize the layout by making a <code>default.html</code> file in a new <code>_layouts</code> folder in the root of your site's repository. We can copy the contents of the <code>default.html</code> file from the <a href='https://github.com/jekyll/minima/blob/master/_layouts/default.html'>original template</a>.</li>
+			<li> Then, delete the line that imports a header <code>{%- include head.html -%}</code>, and replace that with the header code below. This will tell the template to look for our custom CSS. 
+
+<pre><code class="html">
+&lthead&gt
+  &ltmeta charset="utf-8"&gt
+  &lttitle>{{ page.title }}&lt/title&gt
+  &ltlink rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl }}"&gt
+&lt/head&gt
+</code> </pre>
+
+		  	</li>
+		  	<li> Customize the layout as you'd like, and commit and push to view the changes on your website. </li>
+
+		  </ul>
+
+  	</p>
+  	<p> Next, let's customize the styling with CSS:
+  		<ul> 
+  			<li> Create a file called <code>/assets/css/style.scss</code> in the root of your site's repository. </li>
+
+  			<li> Copy and paste the content below to the new file: <br>   	
+<pre><code class="html">
+---
+---
+
+@import "{{ site.theme }}";
+
+h1{
+  color: red;
+}
+</code> </pre>
+  			</li>
+  			<li> Commit and push to view the changes on your website. </li>
+  		</ul>
+
+  	 </p>
+
+  	<p> Now if we change the custom CSS in the <code>/assets/css/style.scss</code> file, it should apply to all of our site. For example, try changing the paragraph text color (we'll talk more about CSS techniques later if time allows).</p> -->
 
 
 
