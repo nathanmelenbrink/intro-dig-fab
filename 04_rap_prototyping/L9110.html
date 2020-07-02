@@ -19,9 +19,9 @@
 <link href="../css/style.css" rel="stylesheet">
 
 
-<link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/arduino-light.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/arduino.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 
@@ -98,9 +98,75 @@ void loop() {
 </code></pre>
 
 
+	<p> This approach works fine for simple commands to a single motor. But if we start adding motors or doing more complex commands, it will become useful to encapsulate some of this code in a custom function. Here's an example of a function for driving Motor A: </p>
 
 
-	<p> Once you're comfortable controlling your motor with the L9110, you should try <a href='https://roberthart56.github.io/SCFAB/SC_lab/Output_Devices/FET/index.html' >driving a motor with a transistor.</a> </p>
+<pre><code class="language-arduino">
+/*
+ * This is a custom function to drive Motor A
+ * inputs: direction (L/R), duration (int) 
+ * outputs: motor control
+ */
+void motorA(char d, int t) {
+  if(d =='R'){
+    digitalWrite(A1A, LOW);
+    digitalWrite(A1B, HIGH); 
+  } else if (d =='L'){
+    digitalWrite(A1A, HIGH);
+    digitalWrite(A1B, LOW);    
+  }
+
+  delay(t); // allow motor to run for specified time
+ 
+  digitalWrite(A1A, LOW);	// turn motor OFF
+  digitalWrite(A1B, LOW);    
+}
+</code></pre>
+
+	<p> Then we can call this function from our main loop() function. Putting it all together looks like this: </p>
+
+
+<pre><code class="language-arduino">
+const int A1A = 2;	// define pin 2 for A-1A
+const int A1B = 3;	// define pin 3 for A-1B
+
+void setup() {
+  pinMode(A1A, OUTPUT);	// specify these pins as outputs
+  pinMode(A1B, OUTPUT);    
+}
+
+void loop() {
+  motorA('L', 2000); 	// turn left for 2 seconds
+  delay(1000); 			// delay for 1 second
+  motorA('R', 2000); 	// turn right for 2 seconds
+  delay(1000); 			// delay for 1 second
+}
+
+
+/*
+ * This is a custom function to drive Motor A
+ * inputs: direction (L/R), duration (int) 
+ * outputs: motor control
+ */
+void motorA(char d, int t) {
+  if(d =='R'){
+    digitalWrite(A1A, LOW);
+    digitalWrite(A1B, HIGH); 
+  } else if (d =='L'){
+    digitalWrite(A1A, HIGH);
+    digitalWrite(A1B, LOW);    
+  }
+
+  delay(t); // allow motor to run for specified time
+ 
+  digitalWrite(A1A, LOW);	// turn motor OFF
+  digitalWrite(A1B, LOW);    
+}
+</code></pre>
+
+	<p> Note that the delays are "blocking" which means that they prevent other functions from running simultaneously. We can get around this limitation using timers, but this is a bit more advanced. </p>
+
+	<p> Once you're comfortable controlling your motor with the L9110, you should try <a href='https://roberthart56.github.io/SCFAB/SC_lab/Output_Devices/FET/index.html'> driving a motor with a transistor.</a> </p>
 
 
 	</div>
