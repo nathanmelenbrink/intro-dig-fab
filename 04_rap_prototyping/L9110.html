@@ -165,6 +165,8 @@ void motorA(char d, int t) {
 
 	<p> Note that the delays are "blocking" which means that they prevent other functions from running simultaneously. We can get around this limitation using timers, but this is a bit more advanced. </p>
 
+  <p> Once we have these digital (HIGH/LOW) outputs working, we can modify the code to have speed control using <a href='https://www.arduino.cc/en/Tutorial/PWM'> PWM</a>. The function to do this is <code>analogWrite()</code>. Instead of HIGH or LOW, it takes a number between 0-255. Try getting your motor to move at different speeds. </p>
+
 	<p> Once you're comfortable controlling your motor with the L9110, you should try <a href='https://roberthart56.github.io/SCFAB/SC_lab/Output_Devices/FET/index.html'> driving a motor with a transistor.</a> </p>
 
 
