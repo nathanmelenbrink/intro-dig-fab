@@ -62,15 +62,15 @@
 
 	<img src="./L9110-1.jpg" alt="L9110 second step">
 
-	<p> In the same way, connect the A-1A and A-1B pins of the L9110 to pins 2 and 3 of the Metro. </p>
+	<p> In the same way, connect the A-1A and A-1B pins of the L9110 to pins 3 and 4 of the Metro. </p>
 
 	<img src="./L9110-3.jpg" alt="L9110 third step">
 
 	<p> Now plug in your USB cable and upload the following code to your Metro: </p>
 
 <pre><code class="language-arduino">
-const int A1A = 2;	// define pin 3 for A-1A
-const int A1B = 3;	// define pin 4 for A-1B
+const int A1A = 3;	// define pin 3 for A-1A
+const int A1B = 4;	// define pin 4 for A-1B
 
 void setup() {
   pinMode(A1A, OUTPUT);	// specify these pins as outputs
@@ -126,8 +126,8 @@ void motorA(char d, int t) {
 
 
 <pre><code class="language-arduino">
-const int A1A = 2;	// define pin 3 for A-1A
-const int A1B = 3;	// define pin 4 for A-1B
+const int A1A = 3;	// define pin 3 for A-1A
+const int A1B = 4;	// define pin 4 for A-1B
 
 void setup() {
   pinMode(A1A, OUTPUT);	// specify these pins as outputs
