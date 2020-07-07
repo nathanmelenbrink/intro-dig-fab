@@ -46,7 +46,6 @@
 	<p> For this workshop, please collect the following: 
 		<ul> 
 			<li>Metro M0 Express microcontroller </li>
-			<li>Breadboard</li>
 			<li>DC motor (N20 or Canon motor)</li>
 			<li>L9110 </li>
 		</ul>
@@ -79,18 +78,16 @@ void setup() {
 
 void loop() {
 
-  digitalWrite(A1A, LOW);	// specify a direction by setting one pin high and the other low
-  digitalWrite(A1B, HIGH); 	
+  digitalWrite(A1A, LOW);	// the A pin sets the speed (off/on)
+  digitalWrite(A1B, HIGH); 	// the B pin sets the direction (CW/CCW) 
   
   delay(2000); 				// allow the motor to run for 2 seconds
 
-  digitalWrite(A1A, HIGH);	// switch the direction of the motor
-  digitalWrite(A1B, LOW); 	
+  digitalWrite(A1B, LOW); 	// switch the direction of the motor	
   
-  delay(2000); 				// allow the motor to run for 2 seconds
+  delay(2000); 				// allow the motor to run for 4 seconds
 
-  digitalWrite(A1A, LOW);	// specify a direction by setting one pin high and the other low
-  digitalWrite(A1B, LOW); 	
+  digitalWrite(A1A, LOW);	// turn the motor off	
   
   delay(5000); 				// turn the motor off for 5 seconds
 }
@@ -108,13 +105,12 @@ void loop() {
  */
 void motorA(char d, int t) {
   if(d =='R'){
-    digitalWrite(A1A, LOW);
     digitalWrite(A1B, HIGH); 
   } else if (d =='L'){
-    digitalWrite(A1A, HIGH);
     digitalWrite(A1B, LOW);    
   }
 
+  digitalWrite(A1A, HIGH);	// turn motor ON
   delay(t); // allow motor to run for specified time
  
   digitalWrite(A1A, LOW);	// turn motor OFF
@@ -149,13 +145,12 @@ void loop() {
  */
 void motorA(char d, int t) {
   if(d =='R'){
-    digitalWrite(A1A, LOW);
     digitalWrite(A1B, HIGH); 
   } else if (d =='L'){
-    digitalWrite(A1A, HIGH);
     digitalWrite(A1B, LOW);    
   }
 
+  digitalWrite(A1A, HIGH);	// turn motor ON
   delay(t); // allow motor to run for specified time
  
   digitalWrite(A1A, LOW);	// turn motor OFF
@@ -165,7 +160,7 @@ void motorA(char d, int t) {
 
 	<p> Note that the delays are "blocking" which means that they prevent other functions from running simultaneously. We can get around this limitation using timers, but this is a bit more advanced. </p>
 
-  <p> Once we have these digital (HIGH/LOW) outputs working, we can modify the code to have speed control using <a href='https://www.arduino.cc/en/Tutorial/PWM'> PWM</a>. The function to do this is <code>analogWrite()</code>. Instead of HIGH or LOW, it takes a number between 0-255. Try getting your motor to move at different speeds. </p>
+  <p> Once we're able to control the speed with a digital (HIGH/LOW) output, we can modify the code to have speed control using <a href='https://www.arduino.cc/en/Tutorial/PWM'> PWM</a>. The function to do this is <code>analogWrite()</code>. Instead of HIGH or LOW, it takes a number between 0-255, such as <code>analogWrite(A1A, 175);</code>. Try getting your motor to move at different speeds. </p>
 
 	<p> Once you're comfortable controlling your motor with the L9110, you should try <a href='https://roberthart56.github.io/SCFAB/SC_lab/Output_Devices/FET/index.html'> driving a motor with a transistor.</a> </p>
 
