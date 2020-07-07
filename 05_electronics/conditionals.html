@@ -71,7 +71,7 @@ https://www.arduino.cc/en/Tutorial/InputPullupSerial
 
 		<h3> Conditional Statements </h3>
 
-		<p> Let's start with the Button example (File > Examples > Digital > Button). We'll modify this using both pullup and pulldown resistors, then use Arduino's internal <a href='https://www.arduino.cc/en/Tutorial/InputPullupSerial'>INPUT_PULLUP</a></p> 
+		<p> Let's start with the Button example (File > Examples > Digital > Button). We'll modify this using both pullup and pulldown resistors, then use Arduino's internal <a href='https://www.arduino.cc/en/Tutorial/InputPullupSerial'>INPUT_PULLUP</a>. Note that pin 13 of the Metro is already connected to the builtin red LED (also known as LED_BUILTIN). </p> 
 
 		<p> Conditional statements allow a program to make decisions about which lines of code run and which do not. They let actions take place only when a specific condition is met.</p>
 
@@ -98,9 +98,13 @@ https://www.arduino.cc/en/Tutorial/InputPullupSerial
     <p>The 10k resistor is acting as a PULLDOWN resistor, meaning that in the absence of a connection to +3.3V, pin 2 will report it's connection to ground (LOW). Essentially we've created a "path of some resistance" to ground. When the button is unpressed, the circuit will take this path. When the button is pressed, a "path of much less resistance" is created to +3.3V, so pin 2 will report HIGH. What happens if you remove the resistor? Try moving your hand around the circuit. The results will be unpredictable (floating input). Read more about pullup and pulldown resistors on <a href='https://learn.sparkfun.com/tutorials/pull-up-resistors/all'>SparkFun</a>. 
     </p>
 
+    <p>We can convert this to a PULLUP resistor configuration by switching the 3.3V and GND connections on the breadboard. The behavior of the button is now reversed (pressing button turns LED off). </p>
+
+    <img src="./pullup.png" alt="pullup"> <br><br> 
+
     <p> Luckily, many microcontrollers have built-in PULLUP resistors, which operate in the opposite way. Open the DigitalInputPullup example and rewire your circuit so that the button connects pin 2 to ground:</p>
 
-    <img src="./pullup.png" alt="pullup"> <br><br>
+    <img src="./inputpullup.png" alt="inputpullup"> <br><br>
 
     <p> This example also allows us to see what's going on under the hood with the Serial monitor. </p>
 
