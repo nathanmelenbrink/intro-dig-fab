@@ -71,7 +71,7 @@
 	</p>
 
 <pre><code class="html">
-&ltvideo controls&gt
+&ltvideo controls style="width:50%; min-width:300px" &gt
 	&ltsource src="demo.mp4" type="video/mp4"&gt
 &lt/video&gt
 </code> </pre>
@@ -79,9 +79,17 @@
 	<p> And the result should render like this: </p>
 
 		<!-- You can also use HTML tags to include a video -->
-	<video controls>
+	<video controls style="width:50%; min-width:300px">
 		<source src="demo.mp4" type="video/mp4">
 	</video>
+
+	<!-- <video controls style="width:100px" >
+			<source src="./DrumVideo.mp4" type="video/mp4">
+		</video>
+
+		<video controls style="width:50%; min-width:300px" >
+			<source src="./DrumVideo.mp4" type="video/mp4">
+		</video> -->
 
 	<p> For longer videos, it often makes more sense to upload them to a streaming service like YouTube or Vimeo. Once you upload the video, you can right click and "copy embed code" to paste into your html file. It should look something like this: 
 	</p>
