@@ -1,0 +1,119 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131686897-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131686897-2');
+</script>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>PHYS S-12: Introduction to Digital Fabrication</title>
+<meta name="description" content="Index Page">
+<script src="../js/vendor/jquery.min.js"></script>
+<script>
+	$(function(){
+	  $("#header").load("../header.html");
+	  $("#footer").load("../footer.html");
+	});
+</script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link href="../css/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/arduino-light.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/arduino.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+<div id="header"></div>
+
+<!-- FIRST ROW -->
+<div class="row">
+	<div class="col-md-3">
+		<h3> Machine building and Serial port control of motors.</h3>
+	</div >
+
+	<div class="col-md-9">
+
+
+		<h3> Introduction.</h3>
+		<p>Machine concepts. 
+			<ul> 
+				<li>Network.</li>
+        		<li>Address</li>
+        		<li>End Effector.</li>
+			</ul>
+		</p> 
+
+		<h3> Machine with stepper. </h3>
+		<p> Materials needed for this tutorial: 
+			<ul> 
+				<li><a href=''>stepper driver boards (2)</a> </li>
+				<li>Protoboard</li>
+        		<li>Metro or Huzzah</li>
+        		<li>Stepper motor(s)</li>
+			</ul>
+		</p> 
+
+		<h3>Sending serial characters and converting to integers.</h3>
+
+		<p> First, learn to send serial data anbd parse into integer. </p>
+
+					<pre><code class="language-arduino">
+			#include &lt;WiFi.h&gt;
+
+			WiFiServer server(80);
+			</code></pre>
+
+		<h3>Running a stepper using commands.</h3>
+
+		<p> Then use this to run a stepper.</p>
+
+							<pre><code class="language-arduino">
+			#include &lt;WiFi.h&gt;
+
+			WiFiServer server(80);
+			</code></pre>
+
+
+		<h3>Running two steppers using commands.</h3>
+
+		<p> Then run two steppers. </p>
+
+							<pre><code class="language-arduino">
+			#include &lt;WiFi.h&gt;
+
+			WiFiServer server(80);
+			</code></pre>
+
+
+		<p>Then show how to past text files, from spreadsheet.</p>
+
+		<img src='./browser.png' alt='browser'>
+
+
+		
+		
+
+		
+
+	</div >
+</div>
+
+
+
+<div id="footer"></div>
+
+</body>
+</html>
