@@ -55,28 +55,11 @@
 			</ul>
 		</p> 
 
-		<p> The previous tutorial showed how to build a web interface to control your ESP32 over a Local Area Network. If you want to talk to your ESP32, you'll need to do a bit more work. There are many options: </p>
+		<p> The previous tutorial showed how to talk to your ESP32 over a Local Area Network. If you want to talk to your ESP32 from outside your LAN, you'll need to do a bit more work. There are many options: </p>
 
 		<ul> 
 			<li> Build a full-stack server with a Model View Controller (MVC) architecture. This requires you to have (i.e. purchase) hosting services from e.g., BlueHost or DigitalOcean. Here's a <a href='https://randomnerdtutorials.com/control-esp32-esp8266-gpios-from-anywhere/'>tutorial</a> that walks through this method. Other useful tools for this method may include <a href='https://www.ibm.com/cloud-computing/bluemix/'> IBM</a> or <a href='https://aws.amazon.com/iot/'>Amazon Web Services</a>.  </li> 
-			<li> Use a 3rd party platform designed to allow for a server-less IoT. Examples include <a href='https://io.adafruit.com/'>Adafruit IO</a>, <a href='https://thingspeak.com/'>ThingSpeak</a>,  
-<!-- 				
-
-https://www.carriots.com/
-
-
-https://thethings.io/
-
-https://www.artik.io/ 
-
-https://nodered.org/
-
-pubnub
-
-
--->
-
-
+			<li> Use a 3rd party platform designed to allow for a server-less IoT. Examples include <a href='https://io.adafruit.com/'>Adafruit IO</a>, <a href='https://thingspeak.com/'>ThingSpeak</a>, and <a href='https://nodered.org/'>NodeRed</a>.
 			</li> 
 			<li> Use a service like <a href='https://ifttt.com/'>If This, Then That (IFTTT)</a> to manage websocket connections. This service has gotten a bit more "business-oriented" than the previous examples, and doesn't allow direct or low-level control over your IoT devices (at least not without subscribing). It does feature lots of integrations to applications like <a href='https://randomnerdtutorials.com/esp32-esp8266-publish-sensor-readings-to-google-sheets/'>Google Sheets</a>, which you can use for data logging. It might also be the best choice if you want to do things like send an email every time an event is triggered. </li> 
 
@@ -175,7 +158,7 @@ void loop() {
 	<h3> Web Interface</h3>
 	<p> While we can now talk to our device remotely, directly meddling with the database isn't exactly a smooth UI. Let's make a simple web interface to do this. </p>
 
-	<p> Save the code below as a new HTML file (e.g., in your Week 10 folder). On your Firebase console page, look under where it says "Get started by adding Firebase to your app" and click the Web icon (&lt;/&gt;). On the next page, make a name for your app (like LED Toggle), and then copy the auto-generated configuration code into the firebaseConfig variable below. </p>
+	<p> Save the code below as a new HTML file (e.g., in your assignments folder). On your Firebase console page, look under where it says "Get started by adding Firebase to your app" and click the Web icon (&lt;/&gt;). On the next page, make a name for your app (like LED Toggle), and then copy the auto-generated configuration code into the firebaseConfig variable below. </p>
 		
 
 <pre><code class="html">
