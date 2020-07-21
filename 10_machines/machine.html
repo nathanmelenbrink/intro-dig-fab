@@ -68,27 +68,65 @@
 
 		<h3>Sending serial characters and converting to integers.</h3>
 
-		<p> First, learn to send serial data and parse into integer. </p>
+		<p> First, learn to send serial data and parse into integer.  Below is code that finds the integers in a series of serial characters: </p>
 
 					<pre><code class="language-arduino">
-			#include &lt;WiFi.h&gt;
+		
 
-			WiFiServer server(80);
+
+int rec_int;     //byte array of numbers parsed from serial string.  Received on Serial.
+
+void setup() {
+    Serial.begin(0);              //This is the USB serial.
+    Serial.setTimeout(20);        //Set wait time for serial data to 20ms (default 1 sec).
+        while (!Serial) {             //Wait until Serial wakes up.
+    ; 
+    }
+
+    Serial.println("ready");
+}
+
+void loop() {
+    int counter=0;   // count integers received.  
+    
+    while (!Serial.available() ){             //Loop and do nothing until there is a serial character received.
+      ;
+    }
+    
+    while(Serial.available()){                //Receive bytes and parse them into integers.
+       rec_int = Serial.parseInt();
+       counter++;                             //increment counter    
+       Serial.print(rec_int);
+       Serial.print(", ");
+   }
+   
+   Serial.print("  "); 
+   Serial.print(counter);
+   Serial.println(" integers received");          //how many bytes sent.
+   
+}
 			</code></pre>
 
-			<a href='./parse_serial_0.txt'>Code for serial parsing</a> 
+			<a href='./parse_serial_0.txt'>Complete code for serial parsing</a> 
 
 		<h3>Running a stepper using commands.</h3>
 
-		<p> Then use this to run a stepper. Keep track of how many integers sent.</p>
+		<p> Then use this to run a stepper. Keep track of how many integers sent.  The code below is a fragment.  "target" is the integer received from serial as the setpoint.  "step_count" is the variable that keeps track of where the stepper is.  The motor is stepped until "step_count" matches "target".</p>
 
 							<pre><code class="language-arduino">
-			#include &lt;WiFi.h&gt;
-
-			WiFiServer server(80);
+	int step_dir = 1;                 //step_dir determines whether to step +,-, or 0.
+  
+    while(!(step_dir == 0 )){         //This loop continues until the target is reached.
+	    if (target - step_count > 0) step_dir = 1;
+	    else if (target - step_count < 0 ) step_dir = -1;
+	    else step_dir = 0;
+	    step_count += step_dir;               //modify accumulated steps according to step direction.
+	    Stepper1.step(step_dir);
+	    delay(10);
+	    }
 			</code></pre>
 
-			<a href='./serial_setpoint_1.txt'>Code for running one stepper.</a> 
+			<a href='./serial_setpoint_1.txt'>Complete code for running one stepper.</a> 
 
 
 		<h3>Running two steppers using commands.</h3>
@@ -104,7 +142,7 @@
 			<a href='./serial_step_setpoint3.zip'>Code for running two steppers.</a> 
 
 
-		<p>Then show how to paste text files, from spreadsheet.</p>
+		<p>Then show how to paste text files,from spreadsheet.  You can do calculations, as in <a href='https://docs.google.com/spreadsheets/d/1t3upciMKFN9R7U9IX_7Lv_gCNRypH3CRqeuUtiKgamQ/edit?usp=sharing'>this linked example spreadsheet.</a> </p>
 
 		<img src='./browser.png' alt='browser'>
 
