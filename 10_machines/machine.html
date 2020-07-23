@@ -131,18 +131,14 @@ void loop() {
 
 		<h3>Running two steppers using commands.</h3>
 
-		<p> Then run two steppers. Give example of sketch using arrays, functions, tabs.  </p>
+		<p> This command method can be extended to run two stepper motors, as in the code below.  In that code, the serial commands are parsed into integers and stored in an array. The program assumes that commands for motor 1 and motor 2 alternate.  This is the "addressing" method.   </p>
 
-							<pre><code class="language-arduino">
-			#include &lt;WiFi.h&gt;
-
-			WiFiServer server(80);
-			</code></pre>
 
 			<a href='./serial_step_setpoint3.zip'>Code for running two steppers.</a> 
 
+		<p> This sketch puts functions in separate tabs, to make the program more readable.  It can be modified to control other output devices.   </p>
 
-		<p>Then show how to paste text files,from spreadsheet.  You can do calculations, as in <a href='https://docs.google.com/spreadsheets/d/1t3upciMKFN9R7U9IX_7Lv_gCNRypH3CRqeuUtiKgamQ/edit?usp=sharing'>this linked example spreadsheet.</a> </p>
+		<p>It may be useful to calculate command data in a separate program, or in a spreadsheet.  An example is  <a href='https://docs.google.com/spreadsheets/d/1t3upciMKFN9R7U9IX_7Lv_gCNRypH3CRqeuUtiKgamQ/edit?usp=sharing'>this linked spreadsheet,</a>  which calculates steps for the simple two-stepper machine.</p>
 
 		<img src='./browser.png' alt='browser'>
 
