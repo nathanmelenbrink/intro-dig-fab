@@ -75,7 +75,7 @@
 // Declare a "SerialPort" object
 var serial;
 // fill in the name of your serial port here:
-var portName = "COM19";
+var portName = "COM26";
 var textXpos = 10;
 
 function setup() {
