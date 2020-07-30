@@ -1,0 +1,71 @@
+class Buzzer {
+    // Class Member Variables
+    // These are initialized at startup
+    int buzzerPin;
+    int pitch;          // hertz
+
+    // These maintain the current state
+    bool playStatus;        // should it play?
+    int period;                     // the pitch it's currently playing
+    unsigned long startMicros;   // will store last time buzzer was started
+
+    // Constructor - creates a Buzzer
+    // and initializes the member variables and state
+  public: Buzzer(int _pin, int _pitch)  {
+      buzzerPin = _pin;
+      pinMode(buzzerPin, OUTPUT);
+
+      pitch = _pitch;
+      period = 1000000 / pitch;
+      startMicros = micros();
+    }
+
+    void Update() {
+      unsigned long currentMicros = micros();
+
+      if (playStatus) {
+        if ((currentMicros - startMicros) % period <= period / 2) {
+          digitalWrite(buzzerPin, HIGH);
+        }
+        else {
+          digitalWrite(buzzerPin, LOW);
+        }
+      }
+    }
+
+    void Play() {
+      playStatus = true;
+    }
+
+    void Mute() {
+      playStatus = false;
+    }
+
+    void ChangePitch(int _pitch) {
+      period = 1000000 / _pitch;
+    }
+};
+
+int buttonPin = 2;
+Buzzer buzz1(10, 400);
+// Buzzer buzz2(9, 800); // you can add other buzzers on other pins
+
+void setup() {
+  pinMode(buttonPin, INPUT_PULLUP);
+}
+
+void loop() {
+
+  // toggle Mute() and Play() functions every second
+  if (millis() % 2000 == 0)
+    buzz1.Play();
+
+  if (millis() % 2000 == 1000)
+    buzz1.Mute();
+
+  // if button pressed, change to random pitch
+  if (digitalRead(2) == LOW){  
+    buzz1.ChangePitch(random(1000));
+  
+  buzz1.Update(); // main buzzing routine
+}
