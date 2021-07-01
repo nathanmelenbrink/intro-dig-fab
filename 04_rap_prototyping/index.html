@@ -35,7 +35,8 @@
 			<p>
 			3:15: Website Review <br>
 			3:45: Review <a href='../03_electronics/micro.html'>Introduction to microcontrollers</a>, <a href='https://www.arduino.cc/en/Tutorial/DigitalPins'> Digital Pins</a>, <a href='https://www.arduino.cc/en/Tutorial/AnalogInputPins'> Analog Input Pins</a>, <a href='https://www.arduino.cc/en/Tutorial/PWM'> PWM</a>, and <a href='https://www.arduino.cc/en/Tutorial/Memory'>Memory</a><br>
-			4:00: <a href='./foundations'>Arduino Foundations</a>, <a href='./documentation'>Documenting code</a> <br>
+			4:00: <a href='./mechanisms.html'>Mechanism design</a> <br> 
+			4:15: <a href='./foundations'>Arduino Foundations</a>, <a href='./documentation'>Documenting code</a> <br>
 			4:45: Break <br>
 			5:00: Breakout rooms: <a href='./L9110'>Use the L9110 H Bridge Power Driver to drive a motor.</a> Write a new function to give the motor commands. <br> 
 			5:45: <a href='https://roberthart56.github.io/SCFAB/SC_lab/Tools/Conventional/index.html'>Quick prototypes and mechanical design.</a><br>
@@ -44,22 +45,32 @@
 		<h3> Assignment: </h3>
 		<p>
 			Make and document either (a) a kinetic sculpture or (b) a quick prototype of a possible final project. This should integrate an electronic circuit with physical components. In addition to components in the kit, feel free to use materials you find around the house (cardboard, toothpicks, coat hangers, tape and glue, etc.). <br><br>
+
+			<ul>
+			<li> Include circuitry to move your sculpture/prototype. </li>
+				<li>Control the sculpture with a circuit on a breadboard that uses components in the kit (e.g., resistors, potentiometer). Use a multimeter to measure the voltages in your circuit. Use Ohm's law to calculate current through the circuit. </li>
+				<li>Use the Microcontroller Analog in (ADC) to measure the voltage of a potentiometer, or other voltage-divider-based sensor.</li>
+				<li>(Optional) Use tools like TinkerCAD to simulate your circuit and/or tools like Fusion 360 to design and simulate your mechanism.</li>
+				<li> Document your work and learning. <a href='../01_intro/video.html'>Include at least one video/gif</a> of your sculpture. </li>
+			</ul>
+
 			Examples: <br> 
-			<a href='https://sophiecwebster.github.io/PHYSCI-70/03_kinetic/index.html'>Sophie's Birds</a><br> 
-			<a href='http://www.seansullivan.ai/physci-70/post/week3/'>Sean's Spirograph</a><br> 
-			<a href='https://ghadatalebamer.github.io/PS70/assignments/Kinetic%20Sculpture/index.html'>Ghada's String Puppet</a><br>
-			<a href='https://roberthart56.github.io/SCFAB/SC_lab/Projects/light_pen/index.html' >A light-actuated drawing machine</a><br>
-			<a href='https://roberthart56.github.io/SCFAB/SC_lab/Projects/Quick_prototypes/index.html' >Very quick prototypes</a><br>
+			Some good precedents include <a href='https://sophiecwebster.github.io/PHYSCI-70/03_kinetic/index.html'>Sophie's flock of birds</a>, 
+			<!-- <a href='http://www.seansullivan.ai/physci-70/post/week3/'>Sean's drawing machine</a>, -->
+			<a href='https://kassialove.github.io/PS70-assignments/week3.html'>Kassia's dancers</a>,
+			<a href='https://tomkinsc.github.io/harvard-ps70/2020-02-13/'>Chris's Geneva drive</a>,
+			and <a href='https://mturner6300.github.io/PHYSCI-70/simple-demo/01_intro/week3.html'>Megan's bird</a>. Some examples of kinetic sculptures made with common household supplies can be seen from last summer's course, <a href='https://silviafesta.github.io/PHYS_S-12/Assignments/assignment3.html'>especially Silvia's clever use of string</a>, <a href='https://michelleyl78.github.io/PHYS_S-12/04_class/04_class.html'>Michelle's method of making circular cams</a>, and <a href='https://wujibi123.github.io/PHYS_S-12/04_RapidPrototyping/index.html'>Dan's mechanism</a>. 
 		</p>
 
 		<h3> Reading: </h3>
-		    <a href="https://bastiaanvanhengel.files.wordpress.com/2016/06/arduino_projects_book.pdf">Arduino Projects Book</a> Chapters 1-3. <br>
+		   <p> Check out <a href="https://bastiaanvanhengel.files.wordpress.com/2016/06/arduino_projects_book.pdf">Arduino Projects Book</a> Chapters 6, 9, 10. <br>
 			Review <a href='https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law'> Ohm's Law</a> and <a href='https://learn.sparkfun.com/tutorials/analog-vs-digital'>Analog vs. Digital</a> inputs.  
+		</p>
 
 		<h3> Resources: </h3>
 		<p> <a href='https://roberthart56.github.io/SCFAB/SC_lab/Output_Devices/FET/index.html' >Driving a motor with a transistor.</a> <br>
 			<a href='./pot_motor.html' >Controlling a motor with a potentiometer through software.</a> <br>
-			<a href='https://www.arduino.cc/en/Tutorial/Foundations'>Arduino Foundations:</a> <br>
+			<a href='https://www.arduino.cc/en/Tutorial/Foundations'>Arduino Foundations</a> <br>
 			<a href='https://www.arduino.cc/reference/en/'>Language Reference:</a> Discover the what each term of the Arduino code language means. <br>
 			<a href='https://www.arduino.cc/en/Tutorial/Variables'>Variables:</a> Understand how to define and use variables in a Sketch. <br>
 			<a href='https://www.arduino.cc/en/Reference/FunctionDeclaration'>Functions:</a> Learn how to define and use functions in a Sketch. <br>
