@@ -47,24 +47,97 @@
 	<div class="col-md-9">
 
 		<h3> Internet Fundamentals </h3>
-
-		<p> HTTP (Hypertext Transfer Protocol) is an asymmetric request-response client-server protocol (and the most popular application protocol used on the Internet).  An HTTP client sends a request message to an HTTP server.  The server, in turn, returns a response message.  In other words, HTTP is a pull protocol; the client pulls information from the server (rather than the server pushing information down to the client). If you're interested in going deeper on how HTTP protocol works, check out this guide from <a href='https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html'>NTU Singapore</a>.</p>
 		
 		<p> A <b>client</b> is a computer hardware device or software that accesses a service made available by a server. The server is often (but not always) located on a separate physical computer. </p> 
 
 		<p> A <b>server</b> is a physical computer dedicated to run services to serve the needs of other computers. Depending on the service that is running, it could be a file server, database server, home media server, print server, or web server. </p> 
 
-		<p> A <b>host</b> is a computer, connected to other computers for which it provides data or services over a network. In theory, every computer connected to a network acts as a host to other peers on the network. </p>
+		<p> A <b>host</b> is a computer, connected to other computers for which it provides data or services over a network. In theory, every computer connected to a network acts as a host to other peers on the network. In essence, a host reflects the logical relationship of two or more computers on a network.</p>
 
-<!-- To simplify this, suppose you want to download an image from another computer on your network. That computer is “hosting” the image and therefore, it is the host computer. On the other hand, if that same computer downloads an image from your computer, your computer becomes the host computer.
+		<p> To simplify this, suppose you want to download an image from another computer on your network. That computer is “hosting” the image and therefore, it is the host computer. On the other hand, if that same computer downloads an image from your computer, your computer becomes the host computer. </p>
+
+<!-- 
 
 Your computer can be a host to other computers. Likewise, your router can be a host to other routers. But a host must have an assigned IP address. Therefore, modems, hubs, and switches are not considered hosts because they do not have assigned IP addresses. </p> -->
 
-		<p> A server can be located inside or outside of your LAN. Accessibility to the server is determined by whether or not it has a public IP address or private IP address. If the server has a public IP address, it can be accessed from the web. If it has a private IP address, it can only be accessed from inside of your LAN (unless you setup port forwarding for remote access). </p>
-
-
 		<img src='./client-server-model.jpg' alt='client server model'>
 		<!-- https://learntomato.flashrouters.com/what-is-a-client-what-is-a-server-what-is-a-host/ -->
+
+		<p> A server can be located inside or outside of your LAN. Accessibility to the server is determined by whether or not it has a public IP address or private IP address. If the server has a public IP address, it can be accessed from the web. If it has a private IP address, it can only be accessed from inside of your LAN (unless you setup port forwarding for remote access). </p>
+
+		<h3> IP Addresses </h3>
+
+		<p> An Internet Protocol address (IP address) is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. An IP address serves two main functions: host or network interface identification and location addressing. (From Wikipedia) </p>
+
+		<p> Internet Protocol version 4 (IPv4) defines an IP address as a 32-bit number. However, because of the growth of the Internet and the depletion of available IPv4 addresses, a new version of IP (IPv6), using 128 bits for the IP address, was standardized in 1998. IPv6 deployment has been ongoing since the mid-2000s. </p>
+
+		<p> IP addresses are written and displayed in human-readable notations, such as 172.16.254.1 in IPv4, and 2001:db8:0:1234:0:567:8:1 in IPv6. </p>
+
+
+		<h3>What is HTTP?</h3>
+		<p>(From <a href='https://www.w3schools.com/tags/ref_httpmethods.asp'> W3 Schools</a>) The Hypertext Transfer Protocol (HTTP) is designed to enable communications between clients and servers.</p>
+		<p>HTTP works as a request-response protocol between a client and server.</p>
+		<p>Example: A client (browser) sends an HTTP request to the server; then the server 
+		returns a response to the client. The response contains status information about 
+		the request and may also contain the requested content.</p>
+		<hr>
+
+		<h3>HTTP Methods</h3>
+		<ul>
+		  <li><b>GET</b></li>
+		  <li><b>POST</b></li>
+		  <li><strong>PUT</strong></li>
+		  <li><strong>HEAD</strong></li>
+		  <li><strong>DELETE</strong></li>
+		  <li><strong>PATCH</strong></li>
+		  <li><strong>OPTIONS</strong></li>
+		</ul>
+		<p>The two most common HTTP methods are: GET and POST.</p>
+		<hr>
+
+		<h3>The GET Method</h3>
+		<p><strong>GET is used to request data from a specified 
+		resource.</strong></p>
+
+		<p><strong>GET is one of the most common HTTP methods. </strong></p>
+		<p>Note that the query string (name/value pairs) is sent in the URL of 
+		a GET request:</p>
+		<div class="w3-code w3-border notranslate">
+		<code>
+		/test/demo_form.php?name1=value1&amp;name2=value2
+		</code></div>
+
+		<p><b>Some other notes on GET requests:</b></p>
+		<ul>
+		  <li>GET requests can be cached</li>
+		  <li>GET requests remain in the browser history</li>
+		  <li>GET requests can be bookmarked</li>
+		  <li>GET requests should never be used when dealing with sensitive data</li>
+		  <li>GET requests have length restrictions</li>
+		  <li>GET requests are only used to request data (not modify)</li>
+		</ul>
+		<hr>
+
+		<h3>The POST Method</h3>
+		<p class="intro"><strong>POST is used to send data to a server to create/update a resource.</strong></p>
+		<p>The data sent to the server with POST is stored in the request body of the 
+		HTTP request:</p>
+		<div class="w3-code w3-border notranslate">
+		 <code>
+		POST /test/demo_form.php HTTP/1.1<br>
+		Host: w3schools.com<br>
+		   name1=value1&amp;name2=value2
+		</code></div>
+
+		<p><strong>POST is one of the most common HTTP methods. </strong></p>
+		<p><b>Some other notes on POST requests:</b></p>
+		<ul>
+		  <li>POST requests are never cached</li>
+		  <li>POST requests do not remain in the browser history</li>
+		  <li>POST requests cannot be bookmarked</li>
+		  <li>POST requests have no restrictions on data length</li>
+		</ul>
+			<hr>
 
 		<h3> WiFi Communication </h3>
 		
@@ -89,6 +162,7 @@ Your computer can be a host to other computers. Likewise, your router can be a h
 
 
 		<p> With Bluetooth Low Energy, there are two types of devices: the server and the client. The ESP32 can act either as a client or as a server. The server advertises its existence, so it can be found by other devices, and contains the data that the client can read. The client scans the nearby devices, and when it finds the server it is looking for, it establishes a connection and listens for incoming data. This is called point-to-point communication.</p>
+
 
 
 	</div >
