@@ -2,47 +2,60 @@
 <base target="_blank">	
 </head>
 
+<div class="navbar navbar-fixed-top" style="z-index: -1;"></div>
 
-<h3> How to Make a Website </h3>
-	<p> Websites are are documents that use formatting instructions in the Hypertext Markup Language (HTML) to render page content on a display terminal (usually a web browser). Web pages are hosted on a server and accessed with the Hypertext Transfer Protocol (HTTP/HTTPS). There are many ways to create a web page, such as:  </p>
-	<ul>
-		<li> <b>Static sites</b> consist of pages written in basic HTML files. This method is recommended, as it maximizes the amount of control you have over your site, and builds knowledge of web fundamentals. The downside to static sites is that managing repeated elements such as headers and footers can be tedious for very large websites. </li>
-		<li> <b>Content management systems</b> (CMS) store page content in a database and provide functionality to edit and apply themes. This makes it easier to manage large sites, but comes at the cost of control, flexibility and performance.  </li>
-		<li> <b>Static site generators</b> (SSG) are a compromise between the two, where you generate a website using Markdown files and templates. Popular static site generators include Jekyll, Pelican and Hugo. <!-- We've tried these in the past, but found standard static sites to be preferable for making personal websites. --> 
-		Some SSGs require downloading a software package like <a href='http://www.seamonkey-project.org/'>SeaMonkey</a>, which allows you to edit pages in a vidual editor, and automatically converts them to HTML. If you just want to try out HTML conversion without downloading new software, you might find online converters useful (e.g., <a href='https://html-cleaner.com/'>html-cleaner.com</a> or <a href='https://wordtohtml.net/'>wordtohtml.net</a>). 
-		</li>
+<div id="header"></div>
 
-	</ul>
+<xmp theme="united" style="display:none;">
+
+###Infrared LED and Photodiode
 
 
-	<h3> <a href="https://www.w3schools.com/html/html_intro.asp">HyperText Markup Language</a> </h3>
-	<p>(From W3 Schools) HTML is the standard markup language for creating Web pages.</p>
+![pic](./sketch.png)
 
-	<ul>
-		<li>HTML stands for Hyper Text Markup Language</li>
-		<li>HTML describes the structure of Web pages using markup</li>
-		<li>HTML elements are the building blocks of HTML pages</li>
-		<li>HTML elements are represented by tags</li>
-		<li>HTML tags label pieces of content such as &quot;heading&quot;, &quot;paragraph&quot;, &quot;table&quot;, and so on</li>
-		<li>Browsers do not display the HTML tags, but use them to render the content of the page</li>
-	</ul>
+The sketch above describes an Infrared sensor that detects reflected light from an object.
+
+<!-- ![pic](./wires_and_parts.png) -->
+
+![pic](./schematic.png)
+
+This is a schematic for one way to put it together.
+
+![pic](./photo.png)
+
+Here it is on a large circuitboard (left) and more compactly, on a small protoboard (right).
+
+![pic](./signal.png)
+
+The signal from an object that passes ~two meters in front of the sensor.
+
+### Examples 
+
+<a href='https://silviafesta.github.io/PHYS_S-12/Assignments/assignment6.html'> Silvia</a> <br> <br> 
 
 
+<!-- ### Micro
 
-	<pre><code class="html">
-	&lt!DOCTYPE html&gt
-	&lthtml&gt
-	&lthead&gt
-		&lttitle&gtPage Title&lt/title&gt
-	&lt/head&gt
-	&ltbody&gt
-		&lth1&gtThis is a Heading&lt/h1&gt
-		&ltp&gtThis is a paragraph.&lt/p&gt
+A miniaturized version of this sensor works on much smaller scales. Range is ~0 - ~10 mm with ability to see motion less than 1 mm.
+This sensor also detects differences in reflectivity, so it could be used for robotic line-following and similar applications.
 
-	&lt/body&gt
-	&lt/html&gt
-	</code> </pre>
+![pic](optek.jpg)
 
-	<p>Example explained:</p>
+[Optek OPB710 datasheet](https://www.ttelectronics.com/TTElectronics/media/ProductFiles/Optoelectronics/Datasheets/OPB710-730.pdf)
 
+Can purchase from Digikey.  Requires external components.  See Rob for details and samples of working modules. -->
+
+
+_Thanks to Rob Hart, Gabby Perry_ 
+
+
+</xmp>
+
+
+<script src="../../js/strapdown.js"></script>
 <script type="text/javascript" src="../js/iframeResizer.contentWindow.min.js"></script>
+
+</html>
+
+
+
