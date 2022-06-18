@@ -1,142 +1,103 @@
-<!doctype html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>PHYS S-12: Introduction to Digital Fabrication</title>
-<meta name="description" content="Index Page">
-<script src="../js/vendor/jquery.min.js"></script>
-<script>
-	$(function(){
-	  $("#header").load("../header.html");
-	  $("#footer").load("../footer.html");
-	});
-</script>
-
- 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<link href="../css/style.css" rel="stylesheet">
+<head> 
+	<base target="_blank">	
 </head>
-<body>
 
+<div class="navbar navbar-fixed-top" style="z-index: -1;"></div>
 <div id="header"></div>
 
-<!-- FIRST ROW -->
-<div class="row">
 
-	<div class="col-md-3">
+<xmp style="display:none;">
 
-		<h3> Electronics Basics and Microcontroller Intro</h3>
-	</div>
+### Agenda: 
+<p>
+Weekly Overview <br>
 
-	<div class="col-md-9">
+3:15-4:00:  Assignment/Website Review and continued introductions. <!-- <a href='https://roberthart56.github.io/SCFAB/SC_lab/'>Science Center Lab Website</a> -->
+<br>
+4:00-4:30:  <a href='./micro.html'>Introduction to microcontrollers</a> and 
+<a href='https://roberthart56.github.io/SCFAB/SC_lab/Electronics/electronics_basics/electronic_basics.html'>Introduction to electronics.</a><br>
+Circuit Simulation with <a href='https://www.tinkercad.com/'>Tinkercad</a> and <a href='https://www.falstad.com/circuit/'>the Falstad applet.</a><br>
+Gather tools and components. Safety discussion.<br>
+<ul>
+		<li><a href='https://www.adafruit.com/product/3505?gclid=EAIaIQobChMIkpqMvIyn6gIVhorICh05jgSBEAAYASAAEgLxfPD_BwE'>Metro M0 </a> Microcontroller</li>
+		<li>Breadboard</li>
+		<li>Wires and stripper</li>
+		<li>Multimeter</li>
+		<li>Resistors and potentiometer (bag 1)</li>
+		<li>One or more LEDs (bag 3) </li>
+	</ul>
 
-		<h3> Agenda: </h3>
-		<p>
-			Weekly Overview <br>
-			
-			3:15-4:00:  Assignment/Website Review and continued introductions. <!-- <a href='https://roberthart56.github.io/SCFAB/SC_lab/'>Science Center Lab Website</a> -->
-			<br>
-			4:00-4:30:  <a href='./micro.html'>Introduction to microcontrollers</a> and 
-			<a href='https://roberthart56.github.io/SCFAB/SC_lab/Electronics/electronics_basics/electronic_basics.html'>Introduction to electronics.</a><br>
-			Circuit Simulation with <a href='https://www.tinkercad.com/'>Tinkercad</a> and <a href='https://www.falstad.com/circuit/'>the Falstad applet.</a><br>
-			Gather tools and components. Safety discussion.<br>
-			<ul>
-					<li><a href='https://www.adafruit.com/product/3505?gclid=EAIaIQobChMIkpqMvIyn6gIVhorICh05jgSBEAAYASAAEgLxfPD_BwE'>Metro M0 </a> Microcontroller</li>
-					<li>Breadboard</li>
-					<li>Wires and stripper</li>
-					<li>Multimeter</li>
-					<li>Resistors and potentiometer (bag 1)</li>
-					<li>One or more LEDs (bag 3) </li>
-				</ul>
+4:30-5:00:  Breakout rooms for basic circuits.<br>
+<ul>
+		<li> Use a breadboard.</li>
+		<li> Build an LED circuit.</li>
+		<li> Use a multimeter to measure voltage. </li>
+		<li> Find the current through the LED.</li>
+		<li> Calculate Power and discuss energy.</li>
 
-			4:30-5:00:  Breakout rooms for basic circuits.<br>
-			<ul>
-					<li> Use a breadboard.</li>
-					<li> Build an LED circuit.</li>
-					<li> Use a multimeter to measure voltage. </li>
-					<li> Find the current through the LED.</li>
-					<li> Calculate Power and discuss energy.</li>
+	</ul>
 
-				</ul>
-
-			5:00-5:15: Break. Install <a href='https://www.arduino.cc/en/Main/Software'>Arduino IDE</a>. <br><br>
+5:00-5:15: Break. Install <a href='https://www.arduino.cc/en/Main/Software'>Arduino IDE</a>. <br><br>
 
 
-			
-			5:15-5:30: Demonstration of <a href='https://www.adafruit.com/product/3505?gclid=EAIaIQobChMIkpqMvIyn6gIVhorICh05jgSBEAAYASAAEgLxfPD_BwE'>Metro M0 board </a> and Blink.<br><br>
-			
-			5:30 - 6:00:  Breakout rooms: get Metro M0 installed, run the Blink program.
-			<ul>
-				<li> Blink with built-in LED</li>
-				<li> Blink with an LED on the breadboard.</li>
-				<li> Microcontroller as a voltmeter: ADC (Analog to Digital Converter, or "Analog in") and Serial.</li>
-				
-			</ul>
-			
-			  <br>
-		</p>
 
-		<h3> Lab Sections</h3>
-		<p> 			
-		Use the <a href='https://roberthart56.github.io/SCFAB/SC_lab/Electronics/electronics_basics/electronic_basics.html'> Electronics basics </a> page and its links. <br><br>
+5:15-5:30: Demonstration of <a href='https://www.adafruit.com/product/3505?gclid=EAIaIQobChMIkpqMvIyn6gIVhorICh05jgSBEAAYASAAEgLxfPD_BwE'>Metro M0 board </a> and Blink.<br><br>
 
-		1. Use the resistor color code.<br>
-		2. Use the multimeter in Voltage, resistance, and continuity modes.<br>
-		3. Build a voltage divider circuit.  Build a potentiometer circuit.<br>
-		4. Build and measure circuits with resistors in parallel and series.<br>
-		5. Make sure you can load programs into your Metro M0 board.  Use example programs "blink" and "AnalogReadSerial"<br>
-		6. Continue to work with the Microcontroller ADC and explore sensors like the thermistor and magnetic field sensor.  See <a href='https://roberthart56.github.io/SCFAB/SC_lab/Sensors/Sensors.html'> Sensor webpage.</a><br>
-		7. Explore other components:  Capacitors, diodes, sensors.<br>
-		</p> 
-		
-		<h3> Readings:</h3> 
-		<p> <a href='https://bastiaanvanhengel.files.wordpress.com/2016/06/arduino_projects_book.pdf'>Arduino Projects Book</a> Chapters 1-3. <br> 
-
-		In preparation for the next topic, read chapters 4 and 8 of <a href='http://mars1980.github.io/resources/making_things_move.pdf' >Making Things Move</a>. Make a note of some of the more interesting points you learn. </p>
+5:30 - 6:00:  Breakout rooms: get Metro M0 installed, run the Blink program.
+<ul>
+	<li> Blink with built-in LED</li>
+	<li> Blink with an LED on the breadboard.</li>
+	<li> Microcontroller as a voltmeter: ADC (Analog to Digital Converter, or "Analog in") and Serial.</li>
 	
-		</p>
+</ul>
 
-		<h3> Assignment: </h3>
-		<p><ul>
-			<li>Make a circuit on a breadboard with components in the kit. Use a multimeter to measure the voltages in your circuit.  Use Ohm's law to calculate the current through some part of the circuit.
-			 </li>
-			<li>Simulate your circuit.</li>
-			<li>Use the Microcontroller Analog in (ADC) to measure the voltage of a potentiometer, or other voltage-divider-based sensor.</li>
-			<li>Document your work and learning.</li>
+  <br>
+</p>
 
-		</ul>
-		
+<h3> Lab Sections</h3>
+<p> 			
+Use the <a href='https://roberthart56.github.io/SCFAB/SC_lab/Electronics/electronics_basics/electronic_basics.html'> Electronics basics </a> page and its links. <br><br>
 
+1. Use the resistor color code.<br>
+2. Use the multimeter in Voltage, resistance, and continuity modes.<br>
+3. Build a voltage divider circuit.  Build a potentiometer circuit.<br>
+4. Build and measure circuits with resistors in parallel and series.<br>
+5. Make sure you can load programs into your Metro M0 board.  Use example programs "blink" and "AnalogReadSerial"<br>
+6. Continue to work with the Microcontroller ADC and explore sensors like the thermistor and magnetic field sensor.  See <a href='https://roberthart56.github.io/SCFAB/SC_lab/Sensors/Sensors.html'> Sensor webpage.</a><br>
+7. Explore other components:  Capacitors, diodes, sensors.<br>
+</p> 
 
-		<h3> Resources: </h3>
-		<p>
-			<a href="https://learn.sparkfun.com/tutorials/what-is-electricity">What is electricity?</a><br>
-			<a href="https://learn.sparkfun.com/tutorials/what-is-a-circuit">What is a circuit?</a><br>
-			<a href="https://learn.sparkfun.com/tutorials/electric-power">Electric power</a>
-			 </p>
-			
-			<!--  
-			<a href='' >Resource 1</a> <br>
-			<a href='' >Resource 2</a> <br>
-			<a href='' >Resource 3</a> <br>
-			<br> -->
+<h3> Readings:</h3> 
+<p> <a href='https://bastiaanvanhengel.files.wordpress.com/2016/06/arduino_projects_book.pdf'>Arduino Projects Book</a> Chapters 1-3. <br> 
 
-		</p>
+In preparation for the next topic, read chapters 4 and 8 of <a href='http://mars1980.github.io/resources/making_things_move.pdf' >Making Things Move</a>. Make a note of some of the more interesting points you learn. </p>
 
-	</div>
-</div>
+</p>
 
+<h3> Assignment: </h3>
+<p><ul>
+<li>Make a circuit on a breadboard with components in the kit. Use a multimeter to measure the voltages in your circuit.  Use Ohm's law to calculate the current through some part of the circuit.
+ </li>
+<li>Simulate your circuit.</li>
+<li>Use the Microcontroller Analog in (ADC) to measure the voltage of a potentiometer, or other voltage-divider-based sensor.</li>
+<li>Document your work and learning.</li>
 
-
-<div id="footer"></div>
-
-<script src="../js/vendor/jquery.min.js"></script>
-<script src="../js/foundation.min.js"></script>
-<script src="../js/htdaa.js"></script>
+</ul>
 
 
-</body>
+
+<h3> Resources: </h3>
+<p>
+<a href="https://learn.sparkfun.com/tutorials/what-is-electricity">What is electricity?</a><br>
+<a href="https://learn.sparkfun.com/tutorials/what-is-a-circuit">What is a circuit?</a><br>
+<a href="https://learn.sparkfun.com/tutorials/electric-power">Electric power</a>
+ </p>
+
+</xmp>
+
+
+<script src="../js/strapdown.js"></script>
+<script type="text/javascript" src="../js/iframeResizer.contentWindow.min.js"></script>
+<link href="../css/style.css" rel="stylesheet">
 </html>
+
