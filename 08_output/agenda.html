@@ -9,49 +9,42 @@
 <xmp style="display:none;">
 
 ### Agenda: 
-<p>
-	3:15: Assignment Review <br>
-	3:45: <a href='http://fab.cba.mit.edu/classes/865.18/motion/index.html'>Output Devices (motion)</a><br>
-	4:00: <a href='./servo'>Servo Motor workshop</a><br>
-	4:45: Break <br>
-	5:00: Breakout rooms: <a href='./led-buzzers'>Buzzers and LED Strips</a> 
-	<ul>
-		<li>Compose a melody (3+ notes) and play it using a buzzer. </li>
-		<li>Play a tone when a button is pressed. </li>
-		<li>Light the first 4 LEDs of your LED strip with different colors. </li>
-	</ul> 
-	(Alternatively, setup your <a href='https://learn.adafruit.com/adafruit-1-14-240x135-color-tft-breakout'>TFT display</a> and write a function to change the screen color). 
-</p>
+
+12:00: Assignment Review <br>
+12:30: <a href='../../lab/output/index.html' target="_self">Output devices overview</a> <br>
+12:45: <a href='../../lab/output/servo/index.html' target="_self">Servo motor workshop</a><br>
+1:30: Break. <a href='https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/'>Install drivers for ESP32</a> <br>
+1:45: Output device extravaganza! (Choose one) 
+
+- <a href='../../lab/output/led/rgb.html' target="_self">RGB LEDs</a>
+- <a href='../../lab/output/led/strips.html' target="_self">LED Strips</a>: Light the first 4 LEDs of your LED strip with different colors. 
+- OLED / <a href='https://learn.adafruit.com/adafruit-1-14-240x135-color-tft-breakout'>TFT displays</a>: Write a function to change the screen color. 
+- <a href='../../lab/output/buzzer/index.html' target="_self">Piezo Buzzers</a>: Compose a melody (3+ notes) and play it. 
+- <a href='https://circuitdigest.com/microcontroller-projects/esp32-based-audio-player'>Speaker/Amplifier</a>: Requires ESP32 ([Or does it?](https://github.com/charliegerard/dev-notes/blob/master/arduino/wavFilesWithoutSdCard.md)). Play a WAV file. 
+- <a href='https://itp.nyu.edu/physcomp/labs/motors-and-transistors/using-a-transistor-to-control-high-current-loads-with-an-arduino/'>EMF (solenoids/valves)</a>: Open and close a solenoid valve with a FET. 
 
 <h3> Assignment: </h3>
-<p>	1. Use an output device that you haven't used before. <br>
-	2. Write a microcontroller program that integrates at least one input device and one output device. Avoid the <code>delay()</code> function by using either timers or interrupts. 
+<p>	1. Use an output device that you haven't used before today. <br>
+	2. Write a microcontroller program that integrates at least one input device and one output device. Avoid the <code>delay()</code> function and use the C++ class structure. 
+	3. Use an oscilloscope to discover the time domain at which your output device is operating. Is it on a fixed clock? What's its speed? Share images and describe your findings. <br>  
+	4. Prepare CAD files for CNC (next class). Consider either 2D DXF files for routing sheet material (like plywood or OSB), or 3D STL files to mill out a (2.5D) shape. We will also cover molding & casting, so you may want to consider milling a mold. 
 </p>
 
-<p> Examples: <a href='https://kian2attari.github.io/2020/03/14/week-8.html'>Kian (pan/tilt kit)</a>, <a href='https://kassialove.github.io/PS70-assignments/week8.html'> Kassia (RGB LED / buzzer)</a>, <a href='https://tsevilla16.github.io/TeddySevilla-PS70/week8.html'> Teddy (LED Strip / pot)</a>. 
+<p> Examples: [PK's capacitive piano](https://laurenbhr.github.io/PHYSCI-70/07_output/index.html), <a href='https://kian2attari.github.io/2020/03/14/week-8.html'>Kian (pan/tilt kit)</a>, <a href='https://kassialove.github.io/PS70-assignments/week8.html'> Kassia (RGB LED / buzzer)</a>, <a href='https://tsevilla16.github.io/TeddySevilla-PS70/week8.html'> Teddy (LED Strip / pot)</a>. 
 
 
 <h3> Labs: </h3>
-<p> Friday 3-4:30pm: Special session on <a href='https://learn.adafruit.com/multi-tasking-the-arduino-part-1/overview'>multi-tasking with Arduino language</a> (will be recorded). Monday lab is open format. <br> 
+Work on the assignment. Use a 'scope. 
 
-Also, make sure to install drivers for <a href='https://nathanmelenbrink.github.io/ps70/10_networking/huzzah1.html'>Huzzah</a> and <a href='https://randomnerdtutorials.com/esp32-cam-video-streaming-face-recognition-arduino-ide/'>ESP32-CAM</a>. <br> 
-</p>
+Install drivers for <a href='https://randomnerdtutorials.com/esp32-cam-video-streaming-face-recognition-arduino-ide/'>ESP32-CAM</a>
 
 <h3> Reading: </h3>
-<p> 
-	<a href='https://learn.sparkfun.com/tutorials/serial-communication/all'> Sparkfun page on Serial/UART </a><br>
-	<a href='https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi'> Sparkfun page on Serial Peripheral Interface </a><br>
-	<a href='https://learn.sparkfun.com/tutorials/i2c'> Sparkfun page on I2C </a><br>
-</p>
+<p> <a href='https://learn.sparkfun.com/tutorials/light-emitting-diodes-leds'>LEDs</a>, <a href='https://learn.sparkfun.com/tutorials/transistors'>Transistors</a>, <a href='https://learn.sparkfun.com/tutorials/how-to-use-an-oscilloscope'>How to use an oscilloscope</a></p>
 
 <h3> Resources: </h3>
 <p>
-	<!-- <a href='https://roberthart56.github.io/SCFAB/SC_lab/Projects/Soldered_protoboard/index.html'>Project on a soldered protoboard.</a><br> -->
-	<a href='https://roberthart56.github.io/SCFAB/SC_lab/Output_Devices/output.html' > Rob's page on Output devices</a> <br>
 	<a href='http://fab.cba.mit.edu/classes/865.18/motion/index.html' >Page on Motors from MIT machine-building class.</a> <br>
 	<a href='http://academy.cba.mit.edu/classes/output_devices/index.html' >"How to Make (almost) Anything" class page on output devices.</a> <br>
-	<!-- <a href='https://roberthart56.github.io/SCFAB/SC_lab/Projects/index.html' >Demo projects.</a> <br>
-	<br> -->
 
 </p>
 
