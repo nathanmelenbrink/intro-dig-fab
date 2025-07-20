@@ -25,6 +25,7 @@
         <li><a href='../../lab/input/piezo/index.html' target="_self">Piezoelectric (voltage-generating)</a></li>
         <li><a href='../../lab/input/IR/index.html' target="_self"> IR transmit-receive (proximity)</a></li>
         <li><a href='https://learn.adafruit.com/adafruit-lis3dh-triple-axis-accelerometer-breakout/arduino'>LIS3DH </a>Accelerometer, <a href='https://randomnerdtutorials.com/arduino-mpu-6050-accelerometer-gyroscope/'>MPU-6050 Gyro/Accelerometer</a>, <a href='https://www.adafruit.com/product/2472'>BNO055</a> IMU</li>
+        <li>ESP32-CAM (or ESP32S3, etc.) See <a href='https://eloquentarduino.com/'> EloquentArduino</a> for onboard image processing, as opposed to RandomNerd etc. where images must be streamed to a more powerful computer for processing. </li>
 	</ul>
 	 </p>
 <p>
@@ -36,9 +37,11 @@
 
 <h3> Assignment: </h3>
 <p>
-	1. Use a sensor to measure a physical quantity with your microcontroller. Calibrate your sensor (describe the range between its min and max values, and whether/how you can control this range). Show data in the form of a table or graph. <br>
-
-	2. Do the same as (1) with a capacitive sensor you have fabricated yourself using copper tape, aluminum foil, Velostat, etc. 
+	1. Make a capacitive sensor to measure a physical quantity with your microcontroller. Avoid the <code>delay()</code> function; use timers instead. <br>
+	2. Configure and use another sensor (temperature, microphone, etc.). Include at least one output device (it could just be an LED). Avoid the <code>delay()</code> function and use the C++ class structure. <br>
+	3. Include schematics of each sensor.  
+	4. Calibrate each sensor by plotting points on a graph. Discuss the relationship between the signals recorded by your microcontroller and the physical quantities that you're measuring (i.e., it is likely not a linear relationship). <br>
+	5. Make a plan for the CNC assignment. Consider either 2D DXF files for routing sheet material (like plywood or OSB), or 3D STL files to mill out a (2.5D) shape. 
 
 </p>
 
