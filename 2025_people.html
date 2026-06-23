@@ -1,0 +1,142 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>PHYS-S12: Introduction to Digital Fabrication</title>
+<meta name="description" content="Index Page">
+
+<script src="js/vendor/jquery.min.js"></script>
+<script> 
+	$(function(){
+	  $("#header").load("root_header.html"); 
+	  $("#footer").load("root_footer.html"); 
+	});
+</script>
+
+
+<link href="css/style.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<script src="js/vendor/modernizr.js"></script>
+
+<script type="text/javascript">
+var pages = new Array(
+	["https://adrianb31.github.io/Phys_12/", "Adrian Baginski"],
+	["https://aravski.github.io/ps70/", "Arav Patel"],
+	["https://aryaveer77.github.io/PS70/", "AV Desai"],
+	["https://xp-px-ih.github.io/S-12-Website/ ", "Canden Barnett"],
+	["https://caseduda.github.io/DigitalFabrication/", "Case Duda"],
+	["https://catherineliao-mh.github.io/PHYSS-12/", "Catherine Liao"],
+	["https://crimsonkuri.github.io/PS70/index.html", "Chris Lapop Salazar"],
+	["https://chinari0.github.io/physs12/index.html", "Cinar Birgili"],
+	["https://eckay.github.io/phys_s-12/index.html", "Emma Kay"],
+	["https://fatihsen34.github.io/digitalfabrication/index.html", "Fatih Sen"],
+	["https://hjackson27745.github.io/phys-12/index.html", "Helena Jackson "],
+	["https://isagrotti.github.io/ps12-new/", "Isabella Grotti "],
+	["https://jpark47-ssp.github.io/DigitalFabrication/index.html", "Jeongwoo Park"],
+	["https://kamronilyosov.github.io/PHYS-S-12/", "Kamron Ilyosov"],
+	["https://digi-fab-leogilmours-projects.vercel.app/", "Leo Gilmour"],
+	["https://carrot-phys.github.io/Mark-phys-s-12/index.html", "Mark Shirokii"],
+	["https://fulcrum-08.github.io/PS70/index.html", "Mazen Abdul-Knerr"],
+	["https://legenderyguy.github.io/PS70/", "Mehmet Daneoglu"],
+	["https://nickkosty.github.io/phys-s-12/index.html", "Nick Kostyuchek"],
+	["https://saraalhamran.github.io/Phys-Sara/index.html", "Sara Alhamran"],
+	["https://liblivity.github.io/physs12/index.html", "Stephen Peng"],
+	["https://virajsahi.github.io/Digital_fabrication/index.html", "Viraj Sahi"],
+	["https://william1li.github.io/digital-fabrication-site/index.html", "Will Li"],
+	["https://esotericpyramid.github.io/Digital-Fabrication/", "Zachary Rogers"],
+	["https://judyw2054.github.io/Digital-Fabrication/index.html", "Judy Wu"],
+)
+
+var indices = []
+for (var i = 0; i < pages.length; ++i) indices.push(i)
+function get_time() {
+   if (window.performance != undefined)
+      if (window.performance.now != undefined) {
+         timer = "performance.now"
+         return performance.now()
+         }
+   timer = "Date.now"
+   return Date.now()
+   }
+var t0 = get_time()
+function random_page() {
+   var t = get_time()
+   var seconds = (t-t0)/1000.0
+   var ms = seconds-Math.floor(seconds)
+   index = Math.floor(indices.length * ms)
+   value = indices[index]
+   indices.splice(index,1)
+   if (indices.length == 0) {
+      indices = []
+      for (var i = 0; i < pages.length; ++i) indices.push(i)
+      }
+   //alert(pages[value][0]+" "+ms.toFixed(3)+" "+(value+1)+"/"+pages.length)
+   alert(pages[value][1])
+   window.open(pages[value][0])
+   }
+</script>
+
+</head>
+
+
+
+<body>
+
+<div id="header"></div>
+
+<div class="row">
+	<div class="large-12 columns">
+		
+		<p> <b>Prior years:</b> <a href='./2019_people.html'>2019</a>, <a href='./2020_people.html'>2020</a>, <a href='./2021_people.html'>2021</a></p>
+
+		<p> <b>Students</b> </p>
+
+		<div style="margin-left:2.5%">
+			<p> <a href="javascript:random_page()">random page</a><br>
+			<br>
+			<script type="text/javascript">
+			for (i = 0; i < pages.length; ++i) {
+			   document.write("<a href="+pages[i][0]+">"+pages[i][1]+"</a><br>")
+			   }
+			</script>
+			</p>
+		</div>
+		
+
+		<p> <b>Teaching Staff</b> </p>
+
+		<div style="margin-left:2.5%">
+			<p>	
+				
+				<a href="http://nathanmelenbrink.com/"> Nathan Melenbrink</a><br>
+				<a href="http://fab.cba.mit.edu/classes/863.18/Harvard/people/victoria/index.html"> Victoria Shen</a><br>
+			</p>
+		</div>
+
+		<p> <b>Additional Support</b> </p>
+
+		<div style="margin-left:2.5%">
+		<p>	
+			<a href='https://kem406.github.io/PHYS-S12/'> Ken Michalek</a><br> 
+			<a href="https://roberthart56.github.io/projects/index.html"> Rob Hart</a><br>
+			<a href= 'https://danielbrosenberg.github.io/physci70' > Daniel Rosenberg </a> <br> 
+			<a href='http://fab.cba.mit.edu/classes/863.17/Harvard/people/KevinGuiney/index.html'> Kevin Guiney </a> <br> 
+			<!-- Jim MacArthur <br> -->
+            
+			</p>
+		</div>
+
+
+</div>
+
+<div id="footer"></div>
+
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/htdaa.js"></script>
+
+
+</body>
+</html>
